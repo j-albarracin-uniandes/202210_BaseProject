@@ -38,11 +38,19 @@ module.exports = function (config) {
     browsers: ['ChromeHeadlessNoSandbox'],
     singleRun: true,
     restartOnFileChange: true,
+    browsers: ["ChromeHeadlessNoSandbox"],
     customLaunchers: {
       ChromeHeadlessNoSandbox: {
-        base: 'ChromeHeadless',
-        flags: ['--no-sandbox']
-      }
-    }
+        base: "ChromeHeadless",
+        flags: [
+          "--no-sandbox",
+          "--user-data-dir=/tmp/chrome-test-profile",
+          "--disable-web-security",
+          "--remote-debugging-address=0.0.0.0",
+          "--remote-debugging-port=9222",
+        ],
+        debug: true,
+      },
+    },
   });
 };
