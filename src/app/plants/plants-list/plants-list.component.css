@@ -1,3 +1,24 @@
-.table-dark{
-    background-color: #212529;
+.table-dark {
+  background-color: #212529;
+}
+th,td{
+    padding: 10px 15px;
+}
+.w-65 {
+  width: 65%;
+}
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+}
+
+.br{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.container{
+    padding: 15px;
 }

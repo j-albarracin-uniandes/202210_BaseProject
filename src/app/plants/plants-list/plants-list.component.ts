@@ -19,6 +19,13 @@ export class PlantsListComponent implements OnInit {
       console.log(this.plants)
     });
   }
+  totalInterior():number{
+    return this.plants.filter((e)=>e.tipo==='Interior').length;
+  }
+
+  totalExterior():number{
+    return this.plants.filter((e)=>e.tipo==='Exterior').length;
+  }
  
   ngOnInit() {
     this.getPlants();
